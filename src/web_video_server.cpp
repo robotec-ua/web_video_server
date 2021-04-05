@@ -240,7 +240,6 @@ bool WebVideoServer::handle_stream_viewer(const async_web_server_cpp::HttpReques
 
     std::stringstream ss;
     ss << "<html><head><title>" << topic << "</title></head><body>";
-    ss << "<h1>" << topic << "</h1>";
     ss << stream_types_[type]->create_viewer(request);
     ss << "</body></html>";
     connection->write(ss.str());
